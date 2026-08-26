@@ -70,7 +70,7 @@ AI-Phishing-Email-Analyzer/
 
 ## Installation
 
-git clone https://github.com/YOUR-USERNAME/AI-Phishing-Email-Analyzer.git
+git clone https://github.com/Yashh91/AI-Phishing-Email-Analyzer.git
 
 cd AI-Phishing-Email-Analyzer
 
