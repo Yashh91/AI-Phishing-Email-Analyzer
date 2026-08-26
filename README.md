@@ -4,18 +4,18 @@
 
 A Python-based cybersecurity tool that analyzes emails for common phishing indicators, detects suspicious URLs and language patterns, calculates a risk score, and provides security recommendations.
 
-## ✨ Features
+##  Features
 
-- 📧 Email header and content analysis
-- 🔗 Suspicious URL detection
-- ⚠️ Phishing keyword detection
-- 🔑 Credential-request detection
-- 🚨 Urgency and financial-request detection
-- 📊 Risk scoring
-- 🤖 AI-assisted analysis
-- 📄 Security report generation
+-  Email header and content analysis
+-  Suspicious URL detection
+-  Phishing keyword detection
+-  Credential-request detection
+-  Urgency and financial-request detection
+-  Risk scoring
+-  AI-assisted analysis
+-  Security report generation
 
-## 🖥️ Screenshots
+##  Screenshots
 
 ### Analyzer
 
@@ -68,15 +68,15 @@ AI-Phishing-Email-Analyzer/
     ├── analyzer.png
     └── phishing-result.png
 
----
+```
 ## ⚙️ Installation
 
 ```bash
 git clone https://github.com/Yashh91/AI-Phishing-Email-Analyzer.git
 cd AI-Phishing-Email-Analyzer
 pip install -r requirements.txt
----
-## ▶️ Run
+```
+##  Run
 
 ```bash
 python -m app.main
@@ -84,15 +84,16 @@ The application will display:
 1. Paste email text
 2. Exit
 Select 1, paste the email, and type END when finished.
----
-## 📊 Risk Levels
+```
+
+##  Risk Levels
 
 | Score | Risk Level |
 |------:|------------|
-| 0–29 | 🟢 Low Risk |
-| 30–59 | 🟡 Suspicious |
-| 60–100 | 🔴 High Risk / Phishing |
----
+| 0–29 |  Low Risk |
+| 30–59 |  Suspicious |
+| 60–100 |  High Risk / Phishing |
+
 ## 🧪 Testing
 
 Run the automated tests with:
@@ -100,7 +101,7 @@ Run the automated tests with:
 ```bash
 pytest
 
----
-## 🔒 Disclaimer
+```
+##  Disclaimer
 
 This project is intended for educational and authorized defensive-security testing only. It does not guarantee that an email is safe or malicious.
