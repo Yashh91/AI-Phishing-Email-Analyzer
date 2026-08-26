@@ -1,10 +1,16 @@
-#  AI Phishing Email Analyzer
+# 🔐 AI Phishing Email Analyzer
 
-##  About
+AI Security • Phishing Detection • Email Threat Analysis
+
+Author: Yashh91
+
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+
+## 📌 About
 
 A Python-based cybersecurity tool that analyzes emails for common phishing indicators, detects suspicious URLs and language patterns, calculates a risk score, and provides security recommendations.
 
-##  Features
+## ✨ Features
 
 • Email header and content analysis
 • Suspicious URL detection
@@ -65,30 +71,38 @@ AI-Phishing-Email-Analyzer/
     ├── analyzer.png
     └── phishing-result.png
 
-##  Installation
+## ⚙️ Installation
 
 git clone https://github.com/Yashh91/AI-Phishing-Email-Analyzer.git
 cd AI-Phishing-Email-Analyzer
 pip install -r requirements.txt
 
-##  Run
+## ▶️ Run
 
 python -m app.main
 
-##  Risk Levels
+## 📊 Risk Levels
 
-0–29    →  Low Risk
-30–59   →  Suspicious
-60–100  →  High Risk / Phishing
+0–29    → 🟢 Low Risk
+30–59   → 🟡 Suspicious
+60–100  → 🔴 High Risk / Phishing
 
-##  Testing
+## 🧪 Testing
 
 pytest
 
-##  Disclaimer
+## 🛠️ Technologies
+
+• Python
+• BeautifulSoup
+• Requests
+• tldextract
+• Pytest
+
+## 🔒 Disclaimer
 
 This project is intended for educational and authorized defensive-security testing only. It does not guarantee that an email is safe or malicious.
 
-##  Author
+## 👤 Author
 
 Yashh91
