@@ -1,10 +1,4 @@
-# 🔐 AI Phishing Email Analyzer
-
-AI Security • Phishing Detection • Email Threat Analysis
-
-Author: Yashh91
-
-━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+#  AI Phishing Email Analyzer
 
 ## 📌 About
 
@@ -12,27 +6,30 @@ A Python-based cybersecurity tool that analyzes emails for common phishing indic
 
 ## ✨ Features
 
-• Email header and content analysis
-• Suspicious URL detection
-• Phishing keyword detection
-• Credential-request detection
-• Urgency and financial-request detection
-• Risk scoring
-• AI-assisted analysis
-• Security report generation
+- 📧 Email header and content analysis
+- 🔗 Suspicious URL detection
+- ⚠️ Phishing keyword detection
+- 🔑 Credential-request detection
+- 🚨 Urgency and financial-request detection
+- 📊 Risk scoring
+- 🤖 AI-assisted analysis
+- 📄 Security report generation
 
 ## 🖥️ Screenshots
 
 ### Analyzer
 
-![Analyzer Screenshot](screenshots/analyzer.png)
+<img src="screenshots/analyzer.png" alt="Analyzer Screenshot" width="850">
 
 ### Phishing Detection Result
 
-![Phishing Detection Result](screenshots/phishing-result.png)
+<img src="screenshots/phishing-result.png" alt="Phishing Detection Result" width="850">
+
+---
 
 ## 📂 Project Structure
 
+```text
 AI-Phishing-Email-Analyzer/
 │
 ├── README.md
@@ -71,38 +68,39 @@ AI-Phishing-Email-Analyzer/
     ├── analyzer.png
     └── phishing-result.png
 
+---
 ## ⚙️ Installation
 
+```bash
 git clone https://github.com/Yashh91/AI-Phishing-Email-Analyzer.git
 cd AI-Phishing-Email-Analyzer
 pip install -r requirements.txt
-
+---
 ## ▶️ Run
 
+```bash
 python -m app.main
-
+The application will display:
+1. Paste email text
+2. Exit
+Select 1, paste the email, and type END when finished.
+---
 ## 📊 Risk Levels
 
-0–29    → 🟢 Low Risk
-30–59   → 🟡 Suspicious
-60–100  → 🔴 High Risk / Phishing
-
+| Score | Risk Level |
+|------:|------------|
+| 0–29 | 🟢 Low Risk |
+| 30–59 | 🟡 Suspicious |
+| 60–100 | 🔴 High Risk / Phishing |
+---
 ## 🧪 Testing
 
+Run the automated tests with:
+
+```bash
 pytest
 
-## 🛠️ Technologies
-
-• Python
-• BeautifulSoup
-• Requests
-• tldextract
-• Pytest
-
+---
 ## 🔒 Disclaimer
 
 This project is intended for educational and authorized defensive-security testing only. It does not guarantee that an email is safe or malicious.
-
-## 👤 Author
-
-Yashh91
