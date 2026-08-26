@@ -85,6 +85,8 @@ AI-Phishing-Email-Analyzer/
 └── screenshots/
     ├── analyzer.png
     └── phishing-result.png
+---
+
 ⚙️ Installation
 
 Clone the repository:
