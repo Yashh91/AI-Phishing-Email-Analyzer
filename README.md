@@ -86,9 +86,10 @@ pip install -r requirements.txt
 python -m app.main
 ```
 The application will display:
+```bash
 1. Paste email text
 2. Exit
-
+```
 Select 1, paste the email, and type END when finished.
 
 ##  Risk Levels
