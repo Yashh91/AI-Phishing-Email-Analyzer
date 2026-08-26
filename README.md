@@ -1,53 +1,38 @@
 # 🔐 AI Phishing Email Analyzer
 
-<p align="center">
-  <img src="banner.png" alt="AI Phishing Email Analyzer" width="100%">
-</p>
+AI Security • Phishing Detection • Email Threat Analysis
 
-<p align="center">
-  <b>AI Security • Phishing Detection • Email Threat Analysis</b>
-</p>
+Author: Yashh91
 
----
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
 
 ## 📌 About
 
 A Python-based cybersecurity tool that analyzes emails for common phishing indicators, detects suspicious URLs and language patterns, calculates a risk score, and provides security recommendations.
 
----
-
 ## ✨ Features
 
-- 📧 Email header and content analysis
-- 🔗 Suspicious URL detection
-- ⚠️ Phishing keyword detection
-- 🔑 Credential-request detection
-- 🚨 Urgency and financial-request detection
-- 📊 Risk scoring
-- 🤖 AI-assisted analysis
-- 📄 Security report generation
-
----
+• Email header and content analysis
+• Suspicious URL detection
+• Phishing keyword detection
+• Credential-request detection
+• Urgency and financial-request detection
+• Risk scoring
+• AI-assisted analysis
+• Security report generation
 
 ## 🖥️ Screenshots
 
 ### Analyzer
 
-<p align="center">
-  <img src="screenshots/analyzer.png" alt="Analyzer Screenshot" width="850">
-</p>
+![Analyzer Screenshot](screenshots/analyzer.png)
 
-### Phishing Detection
+### Phishing Detection Result
 
-<p align="center">
-  <img src="screenshots/phishing-result.png" alt="Phishing Detection Result" width="850">
-</p>
-
----
+![Phishing Detection Result](screenshots/phishing-result.png)
 
 ## 📂 Project Structure
 
-```text
 AI-Phishing-Email-Analyzer/
 │
 ├── README.md
@@ -85,46 +70,39 @@ AI-Phishing-Email-Analyzer/
 └── screenshots/
     ├── analyzer.png
     └── phishing-result.png
----
 
-⚙️ Installation
-
-Clone the repository:
+## ⚙️ Installation
 
 git clone https://github.com/Yashh91/AI-Phishing-Email-Analyzer.git
-
 cd AI-Phishing-Email-Analyzer
-
-Install dependencies:
-
 pip install -r requirements.txt
-▶️ Run
+
+## ▶️ Run
+
 python -m app.main
 
-Select:
+## 📊 Risk Levels
 
-1. Paste email text
-2. Exit
+0–29    → 🟢 Low Risk
+30–59   → 🟡 Suspicious
+60–100  → 🔴 High Risk / Phishing
 
-Type END after pasting the email.
+## 🧪 Testing
 
-📊 Risk Levels
-Score	Risk Level
-0–29	🟢 Low Risk
-30–59	🟡 Suspicious
-60–100	🔴 High Risk / Phishing
-🧪 Testing
 pytest
-🛠️ Technologies
-Python
-BeautifulSoup
-Requests
-tldextract
-Pytest
-🔒 Disclaimer
+
+## 🛠️ Technologies
+
+• Python
+• BeautifulSoup
+• Requests
+• tldextract
+• Pytest
+
+## 🔒 Disclaimer
 
 This project is intended for educational and authorized defensive-security testing only. It does not guarantee that an email is safe or malicious.
 
-👤 Author
+## 👤 Author
 
 Yashh91
