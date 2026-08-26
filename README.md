@@ -73,7 +73,9 @@ AI-Phishing-Email-Analyzer/
 
 ```bash
 git clone https://github.com/Yashh91/AI-Phishing-Email-Analyzer.git
+```
 cd AI-Phishing-Email-Analyzer
+```
 pip install -r requirements.txt
 ```
 ##  Run
