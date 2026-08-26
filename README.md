@@ -74,7 +74,9 @@ AI-Phishing-Email-Analyzer/
 ```bash
 git clone https://github.com/Yashh91/AI-Phishing-Email-Analyzer.git
 ```
+```
 cd AI-Phishing-Email-Analyzer
+```
 ```
 pip install -r requirements.txt
 ```
@@ -82,6 +84,8 @@ pip install -r requirements.txt
 
 ```bash
 python -m app.main
+```
+```
 The application will display:
 1. Paste email text
 2. Exit
