@@ -7,6 +7,8 @@ from app.analyzer.email_parser import parse_email
 from app.analyzer.url_analyzer import analyze_urls
 from app.analyzer.text_analyzer import analyze_text
 from app.analyzer.risk_engine import calculate_risk
+from app.ai.ai_analyzer import generate_ai_explanation
+from app.reports.report_generator import generate_report, save_report
 
 
 def print_banner():
@@ -37,15 +39,19 @@ def get_email_text():
 
 def analyze_email(email_text):
     print("\nAnalyzing email...")
+
     print("[*] Parsing email")
-    
     email_data = parse_email(email_text)
 
     print("[*] Analyzing URLs")
-    url_results = analyze_urls(email_data.get("urls", []))
+    url_results = analyze_urls(
+        email_data.get("urls", [])
+    )
 
     print("[*] Analyzing email text")
-    text_results = analyze_text(email_data.get("body", ""))
+    text_results = analyze_text(
+        email_data.get("body", "")
+    )
 
     print("[*] Calculating risk score")
     risk_result = calculate_risk(
@@ -54,47 +60,17 @@ def analyze_email(email_text):
         email_data
     )
 
-    return email_data, url_results, text_results, risk_result
+    print("[*] Generating AI explanation")
+    ai_explanation = generate_ai_explanation(
+        email_data,
+        risk_result
+    )
 
-
-def display_result(email_data, url_results, text_results, risk_result):
-    print("\n")
-    print("=" * 60)
-    print("                PHISHING ANALYSIS REPORT")
-    print("=" * 60)
-
-    print(f"\nSender         : {email_data.get('sender', 'Unknown')}")
-    print(f"Subject        : {email_data.get('subject', 'Unknown')}")
-
-    print("\n" + "-" * 60)
-    print("RISK ASSESSMENT")
-    print("-" * 60)
-
-    print(f"Risk Score     : {risk_result['score']}/100")
-    print(f"Classification : {risk_result['classification']}")
-
-    print("\n" + "-" * 60)
-    print("DETECTED INDICATORS")
-    print("-" * 60)
-
-    findings = risk_result.get("findings", [])
-
-    if not findings:
-        print("[INFO] No significant phishing indicators detected.")
-    else:
-        for finding in findings:
-            print(f"[{finding['severity']}] {finding['message']}")
-
-    print("\n" + "-" * 60)
-    print("RECOMMENDATION")
-    print("-" * 60)
-
-    print(risk_result.get(
-        "recommendation",
-        "Review the email carefully before taking any action."
-    ))
-
-    print("\n" + "=" * 60)
+    return (
+        email_data,
+        risk_result,
+        ai_explanation
+    )
 
 
 def main():
@@ -107,6 +83,7 @@ def main():
         choice = input("\nSelect option: ").strip()
 
         if choice == "1":
+
             email_text = get_email_text()
 
             if not email_text.strip():
@@ -114,26 +91,41 @@ def main():
                 continue
 
             try:
-                email_data, url_results, text_results, risk_result = (
-                    analyze_email(email_text)
+                (
+                    email_data,
+                    risk_result,
+                    ai_explanation
+                ) = analyze_email(email_text)
+
+                report = generate_report(
+                    email_data,
+                    risk_result,
+                    ai_explanation
                 )
 
-                display_result(
-                    email_data,
-                    url_results,
-                    text_results,
-                    risk_result
+                print("\n")
+                print(report)
+
+                filename = save_report(report)
+
+                print(
+                    f"\n[+] Report saved to: {filename}"
                 )
 
             except Exception as error:
-                print(f"\n[ERROR] Analysis failed: {error}\n")
+                print(
+                    f"\n[ERROR] Analysis failed: {error}\n"
+                )
 
         elif choice == "2":
             print("\nExiting AI Phishing Email Analyzer.")
             break
 
         else:
-            print("\n[!] Invalid option. Please select 1 or 2.\n")
+            print(
+                "\n[!] Invalid option. "
+                "Please select 1 or 2.\n"
+            )
 
 
 if __name__ == "__main__":
