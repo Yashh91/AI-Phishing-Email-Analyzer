@@ -4,11 +4,13 @@ import ollama
 MODEL = "qwen3:0.6b"
 
 
-def generate_ai_explanation(email_text):
+def generate_ai_explanation(email_text, risk_score):
     prompt = f"""
 You are a cybersecurity email analysis assistant.
 
 Analyze the following email for phishing.
+
+Current rule-based risk score: {risk_score}/100
 
 Email:
 {email_text}
@@ -20,6 +22,8 @@ Provide:
 3. Social engineering indicators
 4. Suspicious elements
 5. Short explanation
+
+Consider the rule-based risk score, but perform your own contextual analysis.
 
 Keep the response concise and focused on defensive security analysis.
 """
