@@ -2,7 +2,7 @@
 
 <div align="center">
 
-<img src="banner.png" alt="AI Phishing Email Analyzer Banner" width="50%">
+<img src="banner.png" alt="AI Phishing Email Analyzer Banner" width="80%">
 
 </div>
 
