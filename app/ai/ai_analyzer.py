@@ -1,62 +1,41 @@
+import ollama
+
+
+MODEL = "qwen3:0.6b"
+
+
+def analyze_email_with_ai(email_text):
+    prompt = f"""
+You are a cybersecurity email analysis assistant.
+
+Analyze the following email for phishing.
+
+Email:
+{email_text}
+
+Return a short analysis containing:
+
+1. Phishing likelihood: Low, Medium, or High
+2. Intent: What is the sender trying to make the user do?
+3. Social engineering indicators
+4. Suspicious elements
+5. Short explanation
+
+Do not provide instructions for attacking anyone.
 """
-AI-assisted analysis for the AI Phishing Email Analyzer.
-"""
 
-
-def generate_ai_explanation(
-    email_data: dict,
-    risk_result: dict,
-) -> str:
-    """
-    Generate a human-readable explanation of the
-    phishing analysis results.
-    """
-
-    classification = risk_result.get(
-        "classification",
-        "UNKNOWN"
-    )
-
-    score = risk_result.get("score", 0)
-
-    findings = risk_result.get("findings", [])
-
-    if classification == "HIGH RISK / PHISHING":
-        explanation = (
-            f"The email has a high phishing risk with a "
-            f"score of {score}/100. "
+    try:
+        response = ollama.chat(
+            model=MODEL,
+            messages=[
+                {
+                    "role": "user",
+                    "content": prompt
+                }
+            ]
         )
 
-    elif classification == "SUSPICIOUS":
-        explanation = (
-            f"The email contains several suspicious "
-            f"indicators and received a risk score of "
-            f"{score}/100. "
-        )
+        return response["message"]["content"]
 
-    else:
-        explanation = (
-            f"The email has a relatively low risk score "
-            f"of {score}/100. "
-        )
-
-    if findings:
-        explanation += (
-            "The analysis identified the following "
-            "security indicators: "
-        )
-
-        messages = [
-            finding.get("message", "")
-            for finding in findings
-        ]
-
-        explanation += "; ".join(messages) + "."
-
-    else:
-        explanation += (
-            "No significant phishing indicators were "
-            "detected in the supplied email."
-        )
-
-    return explanation
+    except Exception as e:
+        return f"AI analysis failed: {e}"
