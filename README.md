@@ -161,11 +161,34 @@ ollama run qwen3:0.6b
 If the model responds, the AI environment is ready.
 
 ---
+##  Run
+
+After installing the dependencies and setting up Ollama:
+```
+python -m app.main
+```
+The application will display:
+```
+1. Paste email text
+2. Exit
+```
+Select:
+```
+1
+```
+Paste the email and type:
+```
+END
+```
+on a new line when finished.
+
+---
 ##  Risk Levels
-Score	Risk Level
-0–29	 Low Risk
-30–59	 Suspicious
-60–100	 High Risk / Phishing
+
+Score	  Risk Level
+0–29   |  Low Risk
+30–59  |  Suspicious
+60–100 |  High Risk / Phishing
 
 ---
 ##  Testing
