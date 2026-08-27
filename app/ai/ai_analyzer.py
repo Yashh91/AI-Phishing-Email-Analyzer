@@ -13,7 +13,7 @@ Analyze the following email for phishing.
 Email:
 {email_text}
 
-Return a short analysis containing:
+Return:
 
 1. Phishing likelihood: Low, Medium, or High
 2. Intent: What is the sender trying to make the user do?
