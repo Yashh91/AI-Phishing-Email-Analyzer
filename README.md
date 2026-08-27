@@ -1,6 +1,6 @@
-# 🔐 AI Phishing Email Analyzer
+#  AI Phishing Email Analyzer
 
-## 📌 About
+##  About
 
 AI Phishing Email Analyzer is a Python-based cybersecurity tool that combines
 rule-based analysis with local AI analysis to identify potential phishing emails.
@@ -11,17 +11,17 @@ AI-generated security explanation.
 
 ---
 
-## ✨ Features
+##  Features
 
-- 📧 Email content analysis
-- 🔗 Suspicious URL detection
-- ⚠️ Phishing keyword detection
-- 🔑 Credential-request detection
-- 🚨 Urgency and social-engineering detection
-- 📊 Risk scoring
-- 🤖 AI-powered contextual analysis
-- 🧠 Local AI analysis using Ollama
-- 📄 Security report generation
+-  Email content analysis
+-  Suspicious URL detection
+-  Phishing keyword detection
+-  Credential-request detection
+-  Urgency and social-engineering detection
+-  Risk scoring
+-  AI-powered contextual analysis
+-  Local AI analysis using Ollama
+-  Security report generation
 
 ---
 
@@ -43,7 +43,7 @@ a more informative final assessment.
 
 ---
 
-## 🖥️ Screenshots
+##  Screenshots
 
 ### Analyzer
 
@@ -55,7 +55,7 @@ a more informative final assessment.
 
 ---
 
-## 📂 Project Structure
+##  Project Structure
 
 ```text
 AI-Phishing-Email-Analyzer/
@@ -97,7 +97,7 @@ AI-Phishing-Email-Analyzer/
     └── phishing-result.png
 ```
 ---
-## ⚙️ Installation
+##  Installation
 
 ### 1. Clone the Repository
 ```
@@ -159,3 +159,35 @@ ollama run qwen3:0.6b
 ```
 
 If the model responds, the AI environment is ready.
+
+---
+##  Risk Levels
+Score	Risk Level
+0–29	 Low Risk
+30–59	 Suspicious
+60–100	 High Risk / Phishing
+
+---
+##  Testing
+
+Run the automated tests:
+```
+pytest
+```
+The tests verify core email analysis and risk-scoring functionality.
+
+---
+## Disclaimer
+
+This project is intended for educational and authorized defensive-security
+testing only.
+
+The analyzer provides an automated security assessment and does not guarantee
+that an email is safe or malicious. Always verify suspicious emails through
+trusted channels.
+
+---
+## Author
+
+Yashh91
+---
