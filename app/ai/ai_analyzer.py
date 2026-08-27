@@ -4,7 +4,7 @@ import ollama
 MODEL = "qwen3:0.6b"
 
 
-def analyze_email_with_ai(email_text):
+def generate_ai_explanation(email_text):
     prompt = f"""
 You are a cybersecurity email analysis assistant.
 
@@ -13,15 +13,15 @@ Analyze the following email for phishing.
 Email:
 {email_text}
 
-Return:
+Provide:
 
 1. Phishing likelihood: Low, Medium, or High
-2. Intent: What is the sender trying to make the user do?
+2. Intent of the email
 3. Social engineering indicators
 4. Suspicious elements
 5. Short explanation
 
-Do not provide instructions for attacking anyone.
+Keep the response concise and focused on defensive security analysis.
 """
 
     try:
