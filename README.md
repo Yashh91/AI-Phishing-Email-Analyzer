@@ -25,7 +25,7 @@ AI-generated security explanation.
 
 ---
 
-##  AI Analysis
+## 🤖 AI Analysis
 
 The project uses **Ollama** with the **Qwen3:0.6b** local AI model.
 
@@ -132,7 +132,7 @@ source .venv/bin/activate
 python -m pip install -r requirements.txt
 ```
 ---
-##  Ollama Setup
+## 🤖 Ollama Setup
 Ollama is required because the application uses a local AI model
 for contextual phishing analysis.
 ### 1. Install Ollama
@@ -183,7 +183,7 @@ END
 on a new line when finished.
 
 ---
-##  Risk Levels
+## 📊 Risk Levels
 
 | Score | Risk Level |
 |------:|------------|
