@@ -51,11 +51,11 @@ a more informative final assessment.
 
 ##  Screenshots
 
-### Analyzer
+### Analyzer -
 
 <img src="screenshots/analyzer.png" alt="Analyzer Screenshot" width="850">
 
-### Phishing Detection Result
+### Phishing Detection Result -
 
 <img src="screenshots/phishing-result.png" alt="Phishing Detection Result" width="850">
 
