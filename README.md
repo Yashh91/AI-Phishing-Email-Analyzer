@@ -185,10 +185,11 @@ on a new line when finished.
 ---
 ##  Risk Levels
 
-Score	  Risk Level
-0–29   |  Low Risk
-30–59  |  Suspicious
-60–100 |  High Risk / Phishing
+| Score | Risk Level |
+|------:|------------|
+| 0–29 |  Low Risk |
+| 30–59 |  Suspicious |
+| 60–100 |  High Risk / Phishing |
 
 ---
 ##  Testing
