@@ -1,21 +1,49 @@
-#  AI Phishing Email Analyzer
+# 🔐 AI Phishing Email Analyzer
 
 ## 📌 About
 
-A Python-based cybersecurity tool that analyzes emails for common phishing indicators, detects suspicious URLs and language patterns, calculates a risk score, and provides security recommendations.
+AI Phishing Email Analyzer is a Python-based cybersecurity tool that combines
+rule-based analysis with local AI analysis to identify potential phishing emails.
 
-##  Features
+The tool analyzes email content, suspicious URLs, phishing indicators,
+social-engineering patterns, and generates a risk assessment with an
+AI-generated security explanation.
 
--  Email header and content analysis
--  Suspicious URL detection
--  Phishing keyword detection
--  Credential-request detection
--  Urgency and financial-request detection
--  Risk scoring
--  AI-assisted analysis
--  Security report generation
+---
 
-##  Screenshots
+## ✨ Features
+
+- 📧 Email content analysis
+- 🔗 Suspicious URL detection
+- ⚠️ Phishing keyword detection
+- 🔑 Credential-request detection
+- 🚨 Urgency and social-engineering detection
+- 📊 Risk scoring
+- 🤖 AI-powered contextual analysis
+- 🧠 Local AI analysis using Ollama
+- 📄 Security report generation
+
+---
+
+## 🤖 AI Analysis
+
+The project uses **Ollama** with the **Qwen3:0.6b** local AI model.
+
+The AI analyzes:
+
+- Phishing likelihood
+- Email intent
+- Social-engineering indicators
+- Suspicious elements
+- Potential credential-harvesting attempts
+- Overall email context
+
+The AI analysis is combined with rule-based security analysis to provide
+a more informative final assessment.
+
+---
+
+## 🖥️ Screenshots
 
 ### Analyzer
 
@@ -67,47 +95,67 @@ AI-Phishing-Email-Analyzer/
 └── screenshots/
     ├── analyzer.png
     └── phishing-result.png
-
 ```
+---
 ## ⚙️ Installation
 
-```bash
+### 1. Clone the Repository
+```
 git clone https://github.com/Yashh91/AI-Phishing-Email-Analyzer.git
 ```
 ```
 cd AI-Phishing-Email-Analyzer
 ```
+### 2. Create Virtual Environment
+Windows
 ```
-pip install -r requirements.txt
+python -m venv .venv
 ```
-##  Run
-
-```bash
-python -m app.main
+Linux / Kali
 ```
-The application will display:
-```bash
-1. Paste email text
-2. Exit
+python3 -m venv .venv
 ```
-Select 1, paste the email, and type END when finished.
-
-##  Risk Levels
-
-| Score | Risk Level |
-|------:|------------|
-| 0–29 |  Low Risk |
-| 30–59 |  Suspicious |
-| 60–100 |  High Risk / Phishing |
-
-## 🧪 Testing
-
-Run the automated tests with:
-
-```bash
-pytest
-
+### 3. Activate Virtual Environment
+Windows PowerShell
 ```
-##  Disclaimer
+Set-ExecutionPolicy -Scope Process -ExecutionPolicy Bypass
+```
+```
+.\.venv\Scripts\Activate.ps1
+```
+Linux / Kali
+```
+source .venv/bin/activate
+```
+### 4. Install Python Dependencies
+```
+python -m pip install -r requirements.txt
+```
+---
+## 🤖 Ollama Setup
+Ollama is required because the application uses a local AI model
+for contextual phishing analysis.
+### 1. Install Ollama
 
-This project is intended for educational and authorized defensive-security testing only. It does not guarantee that an email is safe or malicious.
+Install Ollama on your operating system.
+
+Verify the installation:
+```
+ollama --version
+```
+### 2. Download Qwen3 Model
+```
+ollama pull qwen3:0.6b
+```
+### 3. Verify the Model
+```
+ollama list
+```
+You should see:
+qwen3:0.6b
+### 4. Test the Model
+```
+ollama run qwen3:0.6b
+```
+
+If the model responds, the AI environment is ready.
