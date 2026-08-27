@@ -1,5 +1,11 @@
 # 🔐 AI Phishing Email Analyzer
 
+<div align="center">
+
+<img src="banner.png" alt="AI Phishing Email Analyzer Banner" width="100%">
+
+</div>
+
 ##  About
 
 AI Phishing Email Analyzer is a Python-based cybersecurity tool that combines
